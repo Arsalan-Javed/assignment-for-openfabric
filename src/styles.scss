@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+
+.toast-message {
+    padding-top: 6px;
+  }
+
+.group{
+    display: flex;
+
+    label{
+        flex: 0 1 25%;
+    }
+    input{
+        flex: 0 1 75%;
+    }
+}
+
+.btn-outline{
+    border-color: #b3aaaa;
+    margin-right: 8px;
+}
+.float-r{
+    float: right;
+}
+.btn-container{
+    width:99%;
+}
+.required{
+    color:red;
+}
+
+.pointer{
+    cursor: pointer;
+}
+.green{
+    color: rgb(85, 235, 85);
+}
+.red{
+    color:rgb(247, 89, 89);
+}
+.mr4{
+    margin-right: 4px;
+}
+.ml4{
+    margin-left: 4px;
+}

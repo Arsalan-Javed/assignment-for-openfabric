@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <h3>Products 
+          <i (click)="addProduct()" class="fas fa-add pointer" title="Add new Product" ></i>
+          <i  (click)="ApiService.logout()" title="Logout" class="fas fa-circle-arrow-up pointer" style="float: right;"></i>
+        </h3>
+       
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Model</th>
+              <th>Color</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of products">
+              <td>{{ product.name }}</td>
+              <td>{{ product.quantity }}</td>
+              <td>{{ product.price }}</td>
+              <td>{{ product.model }}</td>
+              <td>
+                <div class="color" [style.backgroundColor]="product.color"></div>
+              </td>
+              <td>
+                <i (click)="editProduct(product)" class="fas fa-edit pointer green mr4" title="Edit Product"></i>
+                <i (click)="removeProduct(product)" class="fas fa-trash pointer red" title="Delete Product"></i>
+              </td>
+            </tr>
+            <tr *ngIf="products.length==0" ><td colspan="6">No Product found.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
